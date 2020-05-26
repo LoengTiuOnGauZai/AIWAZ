@@ -1,0 +1,20 @@
+{
+  "name": "AIWAZ",
+  "version": "0.0.1",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoengTiuOnGauZai/AIWAZ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoengTiuOnGauZai/AIWAZ/issues"
+  },
+  "homepage": "https://github.com/LoengTiuOnGauZai/AIWAZ#readme"
+}
