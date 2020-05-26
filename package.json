@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/LoengTiuOnGauZai/AIWAZ/issues"
   },
-  "homepage": "https://github.com/LoengTiuOnGauZai/AIWAZ#readme"
+  "homepage": "https://github.com/LoengTiuOnGauZai/AIWAZ#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
 }
