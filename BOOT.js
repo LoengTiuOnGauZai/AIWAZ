@@ -5,7 +5,7 @@ const chalk = require('chalk');
  //Custom checklist
 var inquirer = require('inquirer');
 
-
+var runningProcess = [];
 
 main();
 
@@ -17,7 +17,7 @@ function main() {
 function Banner(ProcessName) {
     var figlet = require('figlet');
     console.log(chalk`{red ${figlet.textSync(ProcessName, {horizontalLayout: 'filled'})}} {bgRed V.${require('./package.json').version}}
-@{yellow.inverse ChisanaKita} @{bgCyan JohnDoeAntler} {gray 2020}\n`);
+ @{yellow.inverse ChisanaKita} @{bgCyan JohnDoeAntler} {gray 2020}\n`);
 }
 
 function ServiceSelection() {
@@ -52,11 +52,30 @@ function ServiceSelection() {
             }
         }
     ]).then(answers => {
-        StartProcess(answers);
+        ProcessHandler(answers.Service);
     });
 
+    function ProcessHandler(arr) {
+        //If incoming Service(s) ID is equrl the now running process(s) ID.
+        if (JSON.stringify(runningProcess)==JSON.stringify(arr)) {
+            //Terminate all process(s).
+        } else {
+            //No Service running
+            if (runningProcess.length == 0) {
+                //Start running selected service
+                StartProcess(arr);
+            } else  {
+                //The overlapped service(s) will be terminated.
+                var overlapID;
+                //filter out the duplicate ID and replacing them into the current running service.
+                
+            }
+
+        }
+    }
+
     function StartProcess(arr) {
-        arr.Service.forEach(e => {
+        arr.forEach(e => {
         // find the option by selected value
         const option = options.filter(x => x.value == e)[0];
 
