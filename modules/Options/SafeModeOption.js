@@ -2,7 +2,6 @@ const Action = require('./Action.js');
 
 class SafeModeOption extends Action {
     constructor() {
-        // super({name: "AIwaz (core)", value: 1, short: "CORE", checked: false});
         super(
             "AIwaz (SafeMode)",
             2,
