@@ -54,24 +54,14 @@ function ServiceSelection() {
     ]).then(answers => {
         ProcessHandler(answers.Service);
     });
-
+    
     function ProcessHandler(arr) {
-        //If incoming Service(s) ID is equrl the now running process(s) ID.
-        if (JSON.stringify(runningProcess)==JSON.stringify(arr)) {
-            //Terminate all process(s).
-        } else {
-            //No Service running
-            if (runningProcess.length == 0) {
-                //Start running selected service
-                StartProcess(arr);
-            } else  {
-                //The overlapped service(s) will be terminated.
-                var overlapID;
-                //filter out the duplicate ID and replacing them into the current running service.
-                
-            }
+        /* 
+            var runningService = 1, 3, 4;
+            var newSelection = 1, 5;
 
-        }
+        */
+
     }
 
     function StartProcess(arr) {
