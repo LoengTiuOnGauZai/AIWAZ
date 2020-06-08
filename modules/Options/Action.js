@@ -30,7 +30,7 @@ class Action {
     }
 
     toString() {
-        return `[ ${this.short} ] successfully loaded.`;
+        return `[ ${this.short} ]`;
     }
 
     get getJson() {
