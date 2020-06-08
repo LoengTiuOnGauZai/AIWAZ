@@ -11,8 +11,14 @@ class SafeModeOption extends Action {
         );
     }
 
-    execute () {
-        console.log(super.toString());
+    execute() {
+        console.log(super.toString() + " successfully loaded."); 
+        super.checked = true;
+    }
+
+    terminate() {
+        console.log(super.toString() + " successfully cancelled."); 
+        super.checked = false;
     }
 }
 

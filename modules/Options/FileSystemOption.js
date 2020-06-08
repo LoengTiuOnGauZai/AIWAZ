@@ -10,8 +10,15 @@ class FileSystemOption extends Action {
             false
         );
     }
+    
     execute() {
-        console.log(super.toString()); 
+        console.log(super.toString() + " successfully loaded."); 
+        super.checked = true;
+    }
+
+    terminate() {
+        console.log(super.toString() + " successfully cancelled."); 
+        super.checked = false;
     }
 }
 
